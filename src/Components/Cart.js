@@ -63,7 +63,7 @@ function Cart({MyProducts,setMyProducts,GetOrderId,setGetOrderId,CustId,setCustI
       console.log("MyOrder In FrontEnd:")
       console.log(myOrder)
 
-      await axios.post("http://localhost:9000/api/Orders/AddOrders",myOrder)
+      await axios.post("https://ecommercebackend-d8ih.onrender.com/api/Orders/AddOrders",myOrder)
       .then(response=>{
 
           alert("Orders successfully Added")
@@ -76,7 +76,7 @@ function Cart({MyProducts,setMyProducts,GetOrderId,setGetOrderId,CustId,setCustI
       var myItems = {OrderedItems:cart}
 
 
-      await axios.post("http://localhost:9000/api/Orders/AddOrderItems",myItems)
+      await axios.post("https://ecommercebackend-d8ih.onrender.com/api/Orders/AddOrderItems",myItems)
       .then(response=>{
 
             alert("Items added to Order Details.."+response.data)
@@ -97,7 +97,7 @@ function Cart({MyProducts,setMyProducts,GetOrderId,setGetOrderId,CustId,setCustI
 
         var SearchItem = {Category:SearchedProduct.current.value}
 
-        axios.post("http://localhost:9000/api/Product/GetSearchedProducts",SearchItem)
+        axios.post("https://ecommercebackend-d8ih.onrender.com/api/Product/GetSearchedProducts",SearchItem)
         .then(response=>{
 
             setMyProducts(response.data)

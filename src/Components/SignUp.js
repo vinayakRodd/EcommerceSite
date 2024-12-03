@@ -24,7 +24,7 @@ function SignUp({userType,setUserType,CheckOutStatus,setCheckOutStatus,setSignUp
 
 
             
-            axios.post("http://localhost:9000/api/Customer/SignUp",myData)
+            axios.post("https://ecommercebackend-d8ih.onrender.com/api/Customer/SignUp",myData)
             .then(response=>{
 
                 alert("Data inserted")

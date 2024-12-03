@@ -30,7 +30,7 @@ function Products({MyProducts,setMyProducts,UserName,cart,setCart,setCount,count
         if(Category.current.value !== "Select the Category"){
             var myObj = {Category:Category.current.value}
 
-            axios.post("http://localhost:9000/api/Product/SearchCategory",myObj)
+            axios.post("https://ecommercebackend-d8ih.onrender.com/api/Product/SearchCategory",myObj)
             .then(response=>{
 
                 setMyProducts(response.data)

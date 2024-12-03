@@ -26,7 +26,7 @@ function OrderDetails({GetOrderId,setGetOrderId,cart,setCart,CustId,setCustId,Us
       var CustomerDetail = {CustId:CustId}
       console.log(CustomerDetail)
       
-      await axios.post("http://localhost:9000/api/Customer/GetCustomerDetails",CustomerDetail)
+      await axios.post("https://ecommercebackend-d8ih.onrender.com/api/Customer/GetCustomerDetails",CustomerDetail)
       .then(response=>{
 
             console.log("GetCustomerDetails: ",response.data)
@@ -35,7 +35,7 @@ function OrderDetails({GetOrderId,setGetOrderId,cart,setCart,CustId,setCustId,Us
 
       alert("AmtDetails:")
       var myData1 = {CustId:CustId}
-      await axios.post("http://localhost:9000/api/Orders/GetMoreDetails",myData1)
+      await axios.post("https://ecommercebackend-d8ih.onrender.com/api/Orders/GetMoreDetails",myData1)
       .then(response=>{
 
           console.log("GetMoreDetails: ",response.data)
@@ -51,7 +51,7 @@ function OrderDetails({GetOrderId,setGetOrderId,cart,setCart,CustId,setCustId,Us
 
       const myData = {OrderId:detail.OrderId}
 
-      await axios.post("http://localhost:9000/api/Orders/getCustomerOrders",myData)
+      await axios.post("https://ecommercebackend-d8ih.onrender.com/api/Orders/getCustomerOrders",myData)
       .then(response=>{
 
             setOrderDetails(response.data)
